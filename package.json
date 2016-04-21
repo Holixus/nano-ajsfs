@@ -1,7 +1,7 @@
 {
   "name": "nano-ajsfs",
-  "version": "1.0.0",
-  "description": "A minimal real file system module for nano-sched-fs",
+  "version": "1.0.1",
+  "description": "A minimal mock(in-memory) file system module for my projects (like nano-mill)",
   "main": "ajsfs.js",
   "scripts": {
     "test": "mocha --reporter spec -u tdd",
