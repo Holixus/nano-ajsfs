@@ -1,6 +1,6 @@
 {
   "name": "nano-ajsfs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A minimal mock(in-memory) file system module for my projects (like nano-mill)",
   "main": "ajsfs.js",
   "scripts": {

@@ -241,6 +241,8 @@ AsjFS.prototype = {
 	mkdir: function (path) {
 		var self = this;
 		return new Promise(function (_res, _rej) {
+			if (!path)
+				error('EEXIST', path);
 			(function (folder, key) {
 				if (key in folder)
 					error('EEXIST', path);
@@ -253,6 +255,8 @@ AsjFS.prototype = {
 	mkpath: function (path) {
 		var self = this;
 		return new Promise(function (_res, _rej) {
+			if (!path)
+				return _res();
 			var folder = self.folder;
 			path = path.split('/');
 			for (var i = 0, n = path.length, l = n-1; i < n; ++i) {

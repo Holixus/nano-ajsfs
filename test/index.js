@@ -245,6 +245,7 @@ suite('mkdir', function () {
 	]);
 
 	massive_fails('fails', mkdir, [
+		'', Error, 'EEXIST',
 		'folder', Error, 'EEXIST',
 		'folders/ok', Error, 'ENOENT'
 	]);
@@ -269,11 +270,13 @@ suite('mkpath', function () {
 	}
 
 	massive('goods', mkpath, [
+		'', { folder:{ subfile: 'o' }, over:'o' },
 		'dir', { folder:{ subfile: 'o' }, over:'o', dir:{} },
 		'folder/dir', { folder:{ subfile: 'o', dir:{} }, over:'o' }
 	]);
 
 	massive('goods', mkpath2, [
+		'', {},
 		'dir', { dir:{} },
 		'folder/dir', { folder:{ dir:{} } }
 	]);
